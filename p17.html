@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Type Conversion</h1>
+    </center>
+    <hr>
+
+    <div id="result">
+
+    </div>
+
+
+
+
+
+
+    <script>
+        var result = document.getElementById('result');
+        let x1 = "10";
+        result.innerHTML += `<h1> x1 = ${x1} and type is <span style="color:green">${typeof(x1)}</span></h1> <hr>`
+
+        //converting string to number using +
+        let y1 = +"10";
+
+        result.innerHTML += `<h1> y1 = ${y1} and type is <span style="color:green">${typeof(y1)}</span></h1>`
+
+        let a = +"10" //number
+        let b = +"10"  //number
+
+         result.innerHTML += `<h1> y1 = ${a} + ${b} = ${a+b} and type is <span style="color:green">a = ${typeof(a)} and b = ${typeof(b)}</span></h1>`
+
+
+         //converting number to string
+
+         let x2 = 10;  //type is the number
+         result.innerHTML += `<h1> x2 = ${x2} and type is <span style="color:green">${typeof(x2)}</span></h1>`
+
+         let y2 = x2 + "";  //coverting number to string
+         result.innerHTML += `<h1> y2 = ${y2} and type is <span style="color:green">${typeof(y2)}</span></h1>`
+
+         let x3 = "40"; //type is string
+         result.innerHTML += `<h1> x3 = ${x3} and type is <span style="color:green">${typeof(x3)}</span></h1>`
+         let y3 = x3-10;
+         result.innerHTML += `<h1> y3 = ${y3} and type is <span style="color:green">${typeof(y3)}</span></h1>`
+
+
+        //  mathemaical expressions between string and number 
+        result.innerHTML += `<hr><h1> "3" - 2   = <span style="color:green">${"3"-2}</span></h1> <hr>` //output is 1 and type is number
+
+        result.innerHTML +=` <hr><h1> "3" = 2   = <span style="color:green">${"3"+2}</span></h1> <hr>` //output is 32 (+ is a concatinating operator) type is string
+
+        result.innerHTML += `<hr><h1> 3 + "2" =    = <span style="color:green">${3+"2"}</span></h1>` //output is 6 and type is number
+
+        result.innerHTML += `<hr><h1> "3" + "2" =    = <span style="color:green">${"3" * "2"}</span></h1>`//output is 6 and type is number
+
+        result.innerHTML += `<hr><h1> "3" + 2 =    = <span style="color:green">${"3" * 2}</span></h1>`//output is 6 and type is number
+
+        result.innerHTML +=` <hr><h1> 3 + "2" =    = <span style="color:green">${3 * "2"}</span></h1>` //output is 6 and type is number
+
+        result.innerHTML += `<hr><h1> "10"+ "2" =    = <span style="color:green">${"10" / "2"}</span></h1>` //output is 5 and tyope is number
+
+        result.innerHTML += `<hr><h1> "10"+ 2 =    = <span style="color:green">${"10" / 2}</span></h1>` //output is 5 and type is number
+    </script>
+    
+
+
+
+    
+</body>
+</html>

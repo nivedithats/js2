@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form to Table</title>
+</head>
+<body>
+  <form id="infoForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age"><br><br>
+    
+    <label for="age">Phone No:</label>
+    <input type="number" id="age" name="Phone no"><br><br>
+    
+    <button type="button" onclick="addRow()">Submit</button>
+  </form>
+
+  <table id="infoTable" border="1">
+    
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Phone no</th>
+      </tr>
+    
+
+    
+  </table>
+
+  <script>
+    
+
+
+
+function addRow() {
+  
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var age = document.getElementById("age").value;
+  var phone = document.getElementById("phone no").value;
+
+  
+ 
+  var newRow = document.getElementById("tr");
+  
+  
+  var name = document.getElementById("td");
+  var email = document.getElementById("td");
+  var age = document.getElementById("td");
+  var phone = document.getElementById("td");
+
+
+
+ 
+  
+  
+  
+  
+  
+  document.getElementById("infoForm").reset();
+}
+</script>
+</body>
+</html>
+
+

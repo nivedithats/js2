@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    
+    
+</head>
+<body>
+    <h1>Currency Converter</h1>
+
+        <input type="number" id="rupees" placeholder="Enter Rupees">
+        <select id="currencySelect">
+            <option value="84" disabled selected>Dollars</option>
+            <option value="84">US Dollar</option>
+            <option value="200">Indonation</option>
+            <option value="260">Kuwaiti</option>
+            <option value="0.0112">Eurp</option>
+            <option value="31.11">Gel</option>
+            <option value="10.63">Hkd</option>
+
+
+            
+        </select>
+        <button type="button" onclick="Currencyconvert()">Convert</button>
+    
+    <p id="result"></p>
+
+    <script>
+        function Currencyconvert() {
+            var rupees = parseFloat( document.getElementById("rupees").value);
+            var currencyValue = parseFloat( document.getElementById("currencySelect").value);
+            var result = rupees * currencyValue;
+            document.getElementById("result").innerText = "Converted amount: " + result;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+

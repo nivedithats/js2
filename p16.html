@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js basic</title>
+</head>
+<body>
+  <center>
+    <h1>Veriable scope</h1>
+  </center>
+  <div id="result"></div>
+  
+  <script>
+    //we have 3 type of veriables(keywords)
+    //var
+    //Let
+    //const
+    //the var is the global scope
+    //the const and let is intrudused in 2015 and the let and const are the local scope(block scope)
+    
+    
+    let x =15;
+    const c = 10;
+
+    if(x>10){
+        var result = document.getElementById('result')
+        let a =  10;
+        var b = 30;
+
+        result.innerHTML  += `<h1> the veriable a value is <span style="color:green">${a}</span></h1>`
+
+        result.innerHTML  += `<h1> the veriable b value is <span style="color:green">${b}</span></h1>`
+        result.innerHTML  += `<h1> the veriable x value is <span style="color:green">${x}</span></h1>`
+
+    }
+
+
+    result.innerHTML = "<h1>outside of the if condition </h1>"
+    try{
+        result.innerHTML += `<h1>the veriable a value is <span style="color:green">${a}</span></h1>`
+    }catch(error){
+        result.innerHTML += `<h1 style="color:red">${error}</h1>`
+    }
+
+    result.innerHTML  += `<h1> the veriable b value is <span style="color:green">${b}</span></h1>`
+    result.innerHTML  += `<h1> the veriable x value is <span style="color:green">${x}</span></h1>`
+
+
+  </script>
+</body>
+</html>
