@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS BASICS</title>
+</head>
+<body>
+    <center>
+        <h1>COVERTING VALUES TO NUMBERS</h1>
+    </center>
+      <!-- <h1>3 <sub>1</sub></h1> -->
+    <div id="result">
+
+    </div>
+
+
+    <script>
+        
+        let str = "123"
+        let result = document.getElementById('result')
+        result.innerHTML += "<h1>converting values to numbers</h1> <hr>"
+
+        result.innerHTML +=`<h1>str variable<span style="color:green"> ${typeof(str)} value is ${str}</span></h1>` //output:string
+        let num = Number(str)
+        result.innerHTML +=`<h1>string to number str variable<span style="color:green"> ${typeof(num)} value is ${num}</span></h1>` //output:number
+
+        let a = "123.90"
+        result.innerHTML += "<h1>converting values to numbers</h1> <hr>"
+
+        result.innerHTML +=`<h1>str variable<span style="color:green"> ${typeof(str)} value is ${str}</span></h1>` //output:123.90
+        let floatNum = Number(str)
+        result.innerHTML +=`<h1>string to number str variable<span style="color:green"> ${typeof(floatNum)} value is ${floatNum}</span></h1>` //output:123
+        
+        let a1 = parseInt(a)
+        result.innerHTML +=`<h1>string to number str variable<span style="color:green"> ${typeof(a1)} value is ${a1}</span></h1>` //output:123
+
+        let a2 = parseFloat(a1)
+        result.innerHTML +=`<h1>string to number str variable<span style="color:green"> ${typeof(a2)} value is ${a2}</span></h1>` //output:123
+
+        let largeValue = 12345.625654545
+        result.innerHTML +=`<h1>largeValue variable value is <span style="color:green"> ${largeValue}</span></h1>` //output: 12345.625654545
+
+        result.innerHTML +=`<h1>largeValue variable value is <span style="color:green"> ${largeValue.toFixed()}</span></h1>` //output: 12345
+
+        result.innerHTML +=`<h1>largeValue variable value is <span style="color:green"> ${largeValue.toFixed(1)}</span></h1>` //output: 12345.6
+
+        result.innerHTML +=`<h1>largeValue variable value is <span style="color:green"> ${largeValue.toFixed(2)}</span></h1>` //output: 12345.62
+
+        result.innerHTML +=`<h1>largeValue variable value is <span style="color:green"> ${largeValue.toFixed(4)}</span></h1>` //output: 12345.6256
+
+
+
+
+        //returning values using Number()
+        result.innerHTML += `<h1>true to number ${Number(false)}</h1>`//0
+
+        result.innerHTML += `<h1>true to number ${Number(true)}</h1>`//1
+
+
+        result.innerHTML += `<h1>true to number ${Number(null)}</h1>`//0
+
+        result.innerHTML += `<h1>true to number ${Number("123")}</h1>`//123 but type is number
+
+        result.innerHTML += `<h1>true to number ${Number("  ")}</h1>`//0
+
+        result.innerHTML += `<h1>true to number ${Number("")}</h1>`//0
+
+        result.innerHTML += `<h1>true to number ${Number("123e-1")}</h1>`//12.3
+
+
+        result.innerHTML += `<h1>true to number ${Number("hhh")}</h1>`//NaN
+
+
+        result.innerHTML += `<h1>true to number ${Number("THIS IS A WORD")}</h1>`//NaN
+
+        result.innerHTML += `<h1>true to number ${Number("NULL")}</h1>`//NaN
+
+        result.innerHTML += `<h1>true to number ${Number("UNDEFINED")}</h1>`//0
+
+
+
+
+
+
+
+
+        
+
+        
+        
+    </script>
+    
+</body>
+</html>

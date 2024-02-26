@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js basics</title>
+</head>
+<body>
+    <center>
+        <h1>Converting numbers to string</h1>
+    </center>
+
+    <div id="result">
+
+    </div>
+
+    <script>
+        let result = document.getElementById('result');
+
+        result.innerHTML += "<h1><u>coverting values string </u></h1> <hr>"
+        var bool = true;
+        result.innerHTML += `<h1><u>coverting values string </u> <span style="color:orange">${typeof(bool)}</span></h1> <hr>`
+
+        var str1 = String(bool)
+        result.innerHTML += `<h1><u>coverting values string </u> <span style="color:orange">${typeof str1}</span></h1> <hr>`
+
+        var str2 = String(10.6)
+        result.innerHTML +=` <h1><u>coverting values string </u> <span style="color:orange">${typeof str2} value is ${str2}</span></h1> <hr>`
+
+        var str3 = String(10) 
+        result.innerHTML += `<h1><u>coverting values string </u> <span style="color:orange">${typeof str3} value is ${str3}</span></h1> <hr>`
+
+        result.innerHTML += `<h1><u>coverting values string </u> <span style="color:orange">${typeof 123} value is after ${typeof String(123)} ${String(123)}</span></h1> <hr>`
+
+        result.innerHTML += `<h1><u>coverting values string </u> <span style="color:orange">${typeof 10 +30} value is after ${typeof String(10 +30)} ${String(10 +30)}</span></h1> <hr>`
+
+        result.innerHTML += `<h1><u>coverting values string </u> <span style="color:orange">${typeof true} value is after ${typeof String(true)} ${String(true)}</span></h1> <hr>` //true
+
+        result.innerHTML += `<h1><u>coverting values string </u> <span style="color:orange">${typeof false} value is after ${typeof String(false)} ${String(false)}</span></h1> <hr>`
+
+        result.innerHTML += `<h1><u>coverting values string </u> <span style="color:orange">${typeof 123e-1} value is after ${typeof String(123e-1)} ${String(123e-1)}</span></h1> <hr>`
+
+        result.innerHTML += `<h1><u>coverting values string </u> <span style="color:orange">${typeof undefined} value is after ${typeof String(undefined)} ${String(undefined)}</span></h1> <hr>`
+
+        result.innerHTML +=` <h1><u>coverting values string </u> <span style="color:orange">${typeof null} value is after ${typeof String(null)} ${String(null)}</span></h1> <hr>`
+        
+    </script>
+    
+</body>
+</html>
