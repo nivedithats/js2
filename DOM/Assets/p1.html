@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basics</title>
+    <style>
+        .lang{
+           color: yellow;
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>DOM(document object model)</h1>
+        <p>the dom is used to update or change or manege the html document though js</p>
+    </center>
+
+    <h1>result</h1>
+
+    <div id="result">
+
+    </div>
+
+    <script>
+        document.body.style.backgroundColor = "teal"
+
+        let result = document.getElementById('result')
+        result.innerHTML = `<h1 class = "lang" id="lang">${document.documentElement.getAttribute('lang')}</h1>`
+
+
+        //printing fristchild name
+
+        console.log(document.head.firstElementChild.nodeName)//meta 
+         //the nodename is used to display that value to string
+
+
+        console.log(document.title)//to select title
+        document.title = "hello"// to assigning value to title 
+        console.log(document.title)//to select title
+
+    </script>
+</body>
+</html>

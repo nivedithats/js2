@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .card{
+            padding: 10px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0px 0px 10px #f2f2f2;
+        }
+        #password{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        [type="checkbox"]{
+            -webkit-appearance: none;
+            width: 60px;
+            height: 30px;
+            background-color: gray;
+            border-radius: 100px;
+            position: relative;
+            cursor: pointer;
+        }
+        [type="checkbox"]:before{
+            content: "";
+            width: 30px;
+            height: 99%;
+            border-radius: 100px;
+            background-color: #ffffff;
+            position: absolute;
+            transition: 0.4s;
+            box-shadow: 0px 0px 3px #b7b7b7;
+           
+        }
+        [type="checkbox"]:checked::before{
+            transform: translateX(30px);
+        }
+        [type="checkbox"]:checked{
+            background-color: rgb(170, 255, 117);
+        }
+        
+
+
+        .c{
+            display: flex;
+            align-items: center;
+            gap:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <label for="">Create Password</label>
+            <input type="password" placeholder="Create strong password" id="password">
+           <div class="c">
+            <input type="checkbox" id="check" onclick="checkShow()"> 
+            <label for="" id="labeltext">show password</label>
+           </div>
+           <input type="checkbox" id="check" onclick="checkShow()">
+        </div>
+    </div>
+
+    <script>
+        function checkShow(){
+            let checkbox = document.getElementById('check')
+            console.log(checkbox)
+            let inputbox = document.getElementById('password')
+            console.log(inputbox)
+
+            let labelText = document.getElementById('labeltext')
+            if(checkbox.checked == true){
+                inputbox.type = "text"
+                // inputbox.placeholder
+                labelText.innerText = "Hide Password"
+            }
+            else{
+                inputbox.type = "password"
+                labelText.innerText = "Show Password"
+
+            }
+        }
+    </script>    
+</body>
+</html>

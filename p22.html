@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carousel</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            min-height: 100vh;
+            justify-content:center;
+            align-items: center;
+        }
+        .container{
+            border: 2px solid #000;
+            width: 400px;
+            height: 300px;
+            position: relative;
+            
+
+        }
+        .container  img{
+               width: 100%; 
+               height: 300px;  
+        }
+        button{
+            padding: 10px;
+            font-size: 2rem;
+            width: 20px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(0, 0, 0);
+            color: #fff;
+        }
+        .next{
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .prev{
+           position: absolute;
+           left: -30px;
+           top: 50%;
+           transform: translateY(-50%);
+
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="container">
+        <img src="" alt="" id="image">
+        <button onclick="PrevButton()" class="prev"><</button>
+        <button onclick="NextButton()"  class="next">></button>
+    
+    </div>
+    <script>
+        let image = document.getElementById('image');
+        let present = 0;
+
+        function carouselChecker(){
+            switch(present){
+            case 1:
+            image.src = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fdiscover%2Ffree-nature-images&psig=AOvVaw2KPUXW_xdh7CTDxjLUiShS&ust=1709094053345000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCJj4r9fVyoQDFQAAAAAdAAAAABAE"
+            break;
+
+            case 2:
+            image.src = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
+            break;
+
+            case 3:
+            image.src = "https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk="
+            break;
+
+
+            default:
+            image.src = "https://media.istockphoto.com/id/1382384282/photo/bangalore-or-bengaluru.jpg?s=612x612&w=0&k=20&c=6pxwL3JxNV2B_NZSLMZLhrSLqAbyCPlGuSZYKImpjKQ="
+            break;
+
+
+            }
+        }
+
+        function NextButton(){
+            present++
+            console.log(present)
+            carouselChecker()
+        }
+
+        function PrevButton(){
+            if(present>1){
+                present--
+                console.log(present)
+                carouselChecker()
+            }
+        }
+        carouselChecker()
+
+    </script>
+</body>
+</html>

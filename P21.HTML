@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quantity</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .quantity{
+            display: flex;
+            padding: 30px;
+            align-items: center;
+            gap: 10px;  
+
+        }
+        button{
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            width: 30px;
+            font-size: 1.3rem;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            box-shadow: 0px 0px 10px rgba(255, 60, 0, 0.189);
+
+
+        }
+        button:active{
+            transform: scale(0.9);
+
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+
+        }
+        input:hover{
+            background-color: rgba(255, 55, 0, 0.174);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="quantity">
+            <button onclick="lessQuantity()">-</button>
+            <input type="number" id="quantity" placeholder="Quantity" readonly>
+            <button onclick="addQuantity()">+</button>
+        </div>
+    </div>
+
+         <script>
+            let num = 1;
+            let quantity = document.getElementById('quantity');
+
+            function addQuantity(){
+                if(num<=30){
+                    num++
+                    quantity.value =num;
+                }
+                else{
+                    alert('your sre reached maximum quantity.....!')
+
+                }
+
+            }
+
+
+
+            
+            function lessQuantity(){
+                if(num>=0){
+                    num--
+                    quantity.value =num;
+                }
+                else{
+                    alert('your sre reached maximum quantity.....!')
+
+                }
+
+            }
+         </script>
+
+
+        
+         
+
+</body>
+</html>
