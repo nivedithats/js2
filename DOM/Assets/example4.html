@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <input type="url" id="url" placeholder="enter url">
+    <input type="number" id="num" placeholder="enter number"> 
+
+    
+    
+    <button onclick="imageGenerater()">Generate images</button>
+
+
+    <div id="result">
+
+    </div>
+
+
+    <script>
+       
+        let result = document.getElementById('result');
+
+        let numValue = document.getElementById('num');
+        let url = document.getElementById('url');
+
+
+        function imageGenerater(){
+            result.innerHTML = ""
+            if(numValue.value ==""){
+                numValue.style.border = "2px solid red"
+
+            }
+            else{
+                 for(let i = 0; i<numValue.value;i++){
+                 let image = document.createElement('img')
+                 image.src = url.value;
+                 
+                 result.appendChild(image)
+            }
+        }
+    }
+         
+            
+            
+    </script>
+</body>
+</html>

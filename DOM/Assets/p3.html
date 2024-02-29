@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>DOM</h1>
+    </center>
+    <hr>
+     <input type="text" name="username" id="name" placeholder="ur name" value="">
+<div  id="result"></div>
+
+    <script>
+            let textBox = document.getElementById('name')
+            var result = document.getElementById('result')
+            result.innerHTML = `<h1> the name of the input is <span style="color:green">${textBox.getAttribute('type')}</span></h1>`
+            result.innerHTML = `<h1> the type of the input is <span style="color:green">${textBox.getAttribute('name')}</span></h1>` 
+            result.innerHTML = `<h1> the type of the input is <span style="color:green">${textBox.getAttribute('placeholder')}</span></h1>`
+             result.innerHTML = `<h1> the type of the input is <span style="color:green">${textBox.getAttribute('value')}</span></h1>`
+
+
+
+
+
+
+
+
+
+            console.log(textBox.getAttribute('id'));
+            console.log(textBox.getAttribute('name'));
+            console.log(textBox.getAttribute('placeholder'));
+            console.log(textBox.getAttribute('value'));
+            console.log(textBox.getAttribute('type'));
+
+
+
+
+            //to assign new value to attribute
+
+            textBox.setAttribute('name',"hello")//attributename,value
+            result.innerHTML += `<h1>the name of the input is <span style="color:green"${textBox.getAttribute('name')}</span></h1>`
+
+
+
+
+
+    </script>
+</body>
+</html>

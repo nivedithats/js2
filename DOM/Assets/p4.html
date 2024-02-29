@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+       
+        
+    </center>
+    <div id="result">
+            
+    </div>
+
+
+
+
+    <script>
+        let heading = document.createElement('h1')
+        heading.innerHTML = "this is the heading"
+        document.body.appendChild(heading) //to add the new chaild to body
+
+
+
+        //selecting result div to js
+        let result = document.getElementById('result');
+
+
+        //creating image
+        let image = document.createElement('img')
+        image.src ="hello"
+        image.alt ="this is the dummy image"
+        image.width = "100"
+        result.appendChild(image)
+
+        //creating p
+        let paragraph = document.createElement('p')
+        paragraph.innerText = "This is a paragraph"
+        result.appendChild(paragraph1)
+
+    
+
+
+
+
+        function creater(){
+       let paragraph = document.createElement('p')
+        paragraph.innerText = "hello"
+        paragraph.style = "color:red"
+        result.appendChild(paragraph1)
+        }
+
+        
+
+
+    </script>
+</body>
+</html>

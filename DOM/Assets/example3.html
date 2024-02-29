@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number">
+    <select name="hello" id="text">
+        <option value="selct" disabled selected >select</option>
+        <option value="10">10</option>
+    </select>
+    <button onclick="creater()">click</button>
+    
+    <div id="result">
+       
+      
+    </div>
+    <script>
+        let selectedValue = document.getElementById('text');
+        function creater(){
+            for(var i=1; i<=selectedValue.value; i++){
+        var text = document.createElement('h1')
+        text.innerText = "hello"
+        // paragraph1.style = "color:red"
+        result.appendChild(text)
+            }
+        }
+    </script>
+</body>
+</html>
