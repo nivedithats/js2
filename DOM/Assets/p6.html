@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .card{
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px #ccc;
+            width: 300px;
+            border-radius: 10px;
+            border-bottom: 4px solid #ff440a;
+        }
+       /* to change the selected text background */ 
+        ::selection{
+           background-color: #ff440a;
+           color: #fff;
+         
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>
+            Creating html elements from javascript and we can remove html elements from javscript
+        </h1>
+    </center>
+
+
+    <section id="result">
+
+    </section>
+   
+    
+
+    <script>
+        let result = document.getElementById('result')
+
+        result.innerHTML = `
+        <div class="card">
+            <h1>Hello world</h1>
+        </div>`
+        function remover(){
+            result.innerHTML = ""
+        } 
+        //remover()
+
+    </script>
+</body>
+</html>

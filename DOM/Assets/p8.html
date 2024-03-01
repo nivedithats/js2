@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <center>
+        <h1>DOM</h1>
+    </center>
+
+    <p class="test">This is the paragraph</p>
+    <h1 class="test">This is a heading</h1>
+    <h1 class="test">This is a heading</h1>
+
+
+
+
+    <script>
+        let testClassname = document.getElementsByClassName('test');
+        console.log(testClassname)
+        console.log(testClassname[0])
+        //testClassname[1].style.backgroundColor ="red"
+        //testClassname[0].style.backgroundColor ="green"
+        //testClassname[1].style.backgroundColor ="green"
+
+
+        for(let i=0;i<testClassname.length;i++){
+        testClassname[i].style.backgroundColor ="green"
+        testClassname[i].style.padding ="10px"
+        testClassname[i].style.color ="#fff"
+
+
+        }
+
+    </script>
+</body>
+</html>
