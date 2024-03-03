@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            width: 300px;
+            min-height: 10px;
+            box-shadow: 0 0 10px #ccc;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .card h3{
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .card>span {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* padding: 10px; */
+            color: rgb(134, 21, 21);
+            background-color: rgb(216, 145, 145);
+        }
+
+        .card>input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0px 10px 0px;
+        }
+
+        .card button {
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(69, 69, 190);
+            color: #fff;
+            border: none;
+            outline: none;
+        }
+
+        .card button:hover {
+            cursor: pointer;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h3>Login</h3>
+            <span id="result"></span>
+            <input type="text" name="" id="uname" placeholder="Enter your name" required>
+            <input type="password" name="" id="upass" placeholder="Enter your password" required>
+            <input type="password" name="" id="cpass" placeholder="Confirm your password" required>
+            <button onclick="checkPassword()">Sign in</button>
+        </div>
+    </div>
+
+    <script>
+
+
+        function checkPassword() {
+            var name = document.getElementById('uname').value;
+            var pass = document.getElementById('upass').value;
+            var cpass = document.getElementById('cpass').value;
+
+            var result = document.getElementById('result');
+
+
+            if (name != "" && pass != "" && cpass != "") {
+                result.innerText = "Login successfully";
+                result.style.backgroundColor = "green";
+                result.style.color = "black";
+                result.style.padding = "10px";
+            }
+            else{
+                result.innerText = "Please enter all values";
+                result.style.backgroundColor = "rgb(216, 145, 145)";
+                result.style.color = "rgb(134, 21, 21)";
+                result.style.padding = "10px";
+            }
+            if (pass != cpass) {
+                result.innerText = "Password and C-password are not match";
+                result.style.backgroundColor = "rgb(216, 145, 145)";
+                result.style.color = "rgb(134, 21, 21)";
+                result.style.padding = "10px";
+            }
+            if(pass.length<5){
+                result.innerText = "Password contain atleast more than 5 characters";
+                result.style.backgroundColor = "rgb(216, 145, 145)";
+                result.style.color = "rgb(134, 21, 21)";
+                result.style.padding = "10px";
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>
