@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .class1{
+            background-color: blueviolet;
+            color: #fff;
+            padding: 30px;
+            width: 200px;
+
+         }
+         .class2{
+            background-color: yellow;
+            color: #000;
+
+         }
+         .hoghlight{
+            padding:50px;
+         }
+         .class3{
+            background-color: blue;
+            height: 300px;
+            width: 300px;
+            border-radius: 100px;
+            color: #fff;
+         }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Dom</h1>
+    </center>
+
+    <div id="info" class="class1 class2">Somthing is very important</div>
+    <button onclick="addClass()">change class</button>
+    <script>
+        let element = document.querySelector('#info');
+        //element.className = " class2"
+       // element.className += " highlights"
+
+
+       function addClass(){
+        element.classList.add('class3');//adding new classname
+        element.classList.remove('class1') //remove  classname
+       }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <center>
+        <h1>DOM</h1>
+    </center>
+
+    <hr>
+
+    <p id="test" style="color: red; font-size:30px; font-family: 'Courier New', Courier, monospace;">This is the paragraph</p>
+    <p>this is the paragraph</p>
+
+    <button onclick="moveRight()">move</button>
+
+    <script>
+        let element = document.querySelector('p');
+
+        document.write(element.style.color, '<br>')
+        document.write(element.style.fontFamily, '<br>')
+        document.write(element.style.fontSize, '<br>')
+        let i =0;
+        function moveRight(){
+          
+            i = i+10;
+            console.log(element.style.transform)
+            if(i>150){
+                element.style.transform = `translateX(150px) translateY(${i}px)`
+            }
+            else {
+                element.style.transform = `translateX(${i}px)`
+                if(i==40){
+                    alert('Game Over')
+                    element.style.transform = "translateX(0)"
+                }
+            }
+        
+            element.style.transition = "1s"
+        
+        }
+        
+
+
+        //selecting style values from html using another one method
+        var allstyles = getComputedStyle(element)
+        console.log(allstyles)
+        document.write(allstyles.getPropertyValue('color'), '<br>')
+        document.write(allstyles.getPropertyValue('font-size'), '<br>')
+        document.write(allstyles.getPropertyValue('font-weight'), '<br>')
+        document.write(allstyles.getPropertyValue('font-style'), '<br>')
+        document.write(allstyles.getPropertyValue('background-color'), '<br>')
+        document.write(allstyles.getPropertyValue('background-image'), '<br>')
+        document.write(allstyles.getPropertyValue('box-shadow'), '<br>')
+    </script>
+    
+</body>
+</html>
