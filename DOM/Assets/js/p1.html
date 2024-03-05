@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Easy Tutorials</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            background: #222;
+        }
+        .card{
+            width: 90%;
+            max-width: 470px;
+            background: linear-gradient(135deg,#00feba,#5b548a);
+            color: #fff;
+            margin: 100px auto 0;
+            border-radius: 20px;
+            padding: 40px 35px;
+            text-align: center;
+
+        }
+        .search{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .search input{
+            border: 0;
+            outline: 0;
+            background-color: #ebfffc;
+            color: #555;
+            padding: 10px 25px;
+            height: 60px;
+            border-radius: 30px;
+            flex: 1;
+            margin-right: 16px;
+            font-size: 18px;
+        }
+        img{
+            width: 40px;
+        }
+        .search button{
+            border: 0;
+            outline: 0;
+            background-color: #ebfffc;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+        }
+        .search button img{
+            width: 30px;
+        }
+        .weather-icon{
+            width: 170px;
+            margin-top: 30px;
+
+        }
+        .weather h2{
+            font-size: 80px;
+            font-weight: 500;
+
+        }
+        .weather h2{
+            font-size: 45px;
+            font-weight: 400;
+            margin-top: -10px;
+
+        }
+        .details{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            margin-top: 50px;
+        }
+        .col img{
+            width: 50px;
+            margin-right: 10px;
+        }
+        p{
+            font-size: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="enter city name" spellcheck="false">
+            <button><img src="https://i.pinimg.com/736x/fa/0e/7b/fa0e7b992eff03c576727e95c746005c.jpg"</button>
+        </div>
+        <div class="weather">
+            <img src="https://www.iconarchive.com/download/i107714/google/noto-emoji-travel-places/42668-sun-behind-rain-cloud.1024.png" alt="" class="weather-icon">
+            <h1 class="temp">22°c</h1>
+            <h2 class="city">New York</h2>
+            <div class="details">
+                <div class=" col">
+                    <img src="https://icon-library.com/images/humidity-icon/humidity-icon-15.jpg"
+                     alt="">
+                <div>
+               <p class="humidity">50%</p>
+                <p>Humidity</p>
+            </div>
+        </div> 
+
+        <div class="col">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDSovfkWOMXsg1Ua8e3OYKRn3WMg4W5kQ3W3TLFA_LsaNCmLRvTMvujhZYyUqrvq5N2vM&usqp=CAU" alt="">
+        <div>
+       <p class="Wind">15km/h</p>
+        <p>Wind speed</p>
+    </div>
+</div> 
+
+
+
+    </div>
+    </div>
+    </div>
+
+    <script>
+        const apikey ="9ef4c2256272e4ccd367c4cd5fc9a7d7"
+        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+
+        const searchBox = document.querySelector(".search input");
+        const searchBtn = document.querySelector(".search button");
+
+        
+
+        async function checkWeather(){
+            const response = await fetch(apiUrl + city + `&appid=${apikey}`);
+            var data = await response.jhon();
+            
+            
+            console.log(data);
+            document.querySelector(".city").innerHTML = data.name;
+            document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
+            document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+            document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
+
+            
+
+        }
+
+
+         searchBtn.addEventListener("click",()=>{
+            checkWeather(searchBox.value);
+
+         })
+
+        </script>
+</body>
+</html>
