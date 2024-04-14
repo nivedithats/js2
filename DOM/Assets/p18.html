@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Window.close() and Window.open()</h1>
+    </center>
+    <button type="button" onclick="openHandler()">Open</button>
+    <button type="button" onclick="closeHandler()">Close</button>
+
+
+
+    <script>
+        var webstates;
+        function openHandler(){
+            websites = open('https://google.com')
+            console.log('websites states',webstates)
+        }
+        function closeHandler(){
+            console.log('websites states',webstates)
+            websites.close
+        }
+
+    </script>
+</body>
+</html>

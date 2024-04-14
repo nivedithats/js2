@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .image{
-            width: 300px;
-        }
-    </style>
+ 
+    
+    
 </head>
 <body>
-    <img src="https://img.freepik.com/free-vector/realistic-light-bulb-with-electricity_23-2149129410.jpg?size=338&ext=jpg&ga=GA1.1.98259409.1709078400&semt=ais" id="bulb">
+    <img src="https://img.freepik.com/free-vector/realistic-light-bulb-with-electricity_23-2149129410.jpg?size=338&ext=jpg&ga=GA1.1.98259409.1709078400&semt=ais" id="bulb"  width="fit-content">
 
     
 
@@ -30,10 +27,15 @@
 
         function onBulb(){
             image.setAttribute('src', "https://img.freepik.com/free-vector/realistic-light-bulb-with-electricity_23-2149129410.jpg?size=338&ext=jpg&ga=GA1.1.98259409.1709078400&semt=ais")
+       image.style.width = "400px";
+       image.style.height = "400px";
+
+
         }
         function offBulb(){
        image.setAttribute('src',"https://i.pinimg.com/564x/e0/fd/25/e0fd25f9127a9a109a0648c83ee61643.jpg"  )
-       image.style.width = "200px";
+       image.style.width = "400px"  ;
+       image.style.height = "400px";
         }
 
 

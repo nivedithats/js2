@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            min-height: 100vh;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            border-radius: 100px;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: lightslategray;
+        }
+        .hide{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <center>
+         <h1>Query selector all</h1>
+
+    </center>
+
+
+    <section>
+        <div id="div1" class="box"></div>
+        <div id="div1" class="box"></div>
+        <div id="div1" class="box"></div>
+        <div id="div1" class="box"></div>
+        <div id="div1" class="box"></div>
+        <div id="div1" class="box"></div>
+        <div id="div1" class="box"></div>
+        <div id="div1" class="box"></div>
+        <div id="div1" class="box"></div>
+        <div id="div1" class="box"></div>
+
+    </section>
+
+
+    <script>
+        let allboxes = document.querySelectorAll('.box')
+
+        function hider(){
+            for (i in allboxes){
+                allboxes[i].classList.add('hello')
+            }
+        }
+        function addClassName(e){
+            e.classList.add('hello')
+        }
+        //hider()
+    </script>
+</body>
+</html>

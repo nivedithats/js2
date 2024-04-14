@@ -4,10 +4,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Form to Table</title>
+<title>Document</title>
 </head>
 <body>
-  <form id="infoForm">
+  <form>
     <label for="name">Name:</label>
     <input type="text" id="name" name="name"><br><br>
     
@@ -17,13 +17,13 @@
     <label for="age">Age:</label>
     <input type="number" id="age" name="age"><br><br>
     
-    <label for="age">Phone No:</label>
-    <input type="number" id="age" name="Phone no"><br><br>
+    <label for="phoneno">Phone No:</label>
+    <input type="number" id="phoneno" name="Phoneno"><br><br>
     
     <button type="button" onclick="addRow()">Submit</button>
   </form>
 
-  <table id="infoTable" border="1">
+  <table id="infoTable" border="1" cellpadding="10px" cellspacing="0">
     
       <tr>
         <th>Name</th>
@@ -43,21 +43,25 @@
 
 function addRow() {
   
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var age = document.getElementById("age").value;
-  var phone = document.getElementById("phone no").value;
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var age = document.getElementById('age').value;
+  var phoneno = document.getElementById('phoneno').value;
+  var infoTable = document.getElementById('infoTable')
+  confirm(" data will be added");
+  infoTable.innerHTML +=`
+  <tr>
+    <td>${name}</td>
+    <td>${email}</td>
+    <td>${age}</td>
+    <td>${phoneno}</td>
+
+  `
 
   
  
-  var newRow = document.getElementById("tr");
+ 
   
-  
-  var name = document.getElementById("td");
-  var email = document.getElementById("td");
-  var age = document.getElementById("td");
-  var phone = document.getElementById("td");
-
 
 
  
@@ -66,7 +70,7 @@ function addRow() {
   
   
   
-  document.getElementById("infoForm").reset();
+  
 }
 </script>
 </body>
